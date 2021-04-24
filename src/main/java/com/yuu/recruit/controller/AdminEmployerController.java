@@ -41,7 +41,7 @@ public class AdminEmployerController {
         return "admin/employer";
     }
     @GetMapping("/delete")
-    public String detele(@RequestParam("id") String id) {
+    public String delete(@RequestParam("id") String id) {
         // 查询所有分类
         Long Id=Long.getLong(id);
        employerService.delete(Id);

@@ -28,7 +28,7 @@ public class AdminServiceImpl implements AdminService {
         Admin currAdmin = adminMapper.selectOneByExample(example);
 
         // 判断密码是否正确, 密码采用 MD5 加密，所以需要把页面传过来的密码加密后进行比较
-        if (currAdmin != null && currAdmin.getPassword().equals(DigestUtils.md5DigestAsHex(admin.getPassword().getBytes()))) {
+        if (currAdmin != null && currAdmin.getPassword().equals(admin.getPassword())) {
             // 密码相同登录成功
             return currAdmin;
         }

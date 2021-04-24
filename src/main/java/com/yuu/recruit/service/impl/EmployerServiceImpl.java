@@ -122,6 +122,12 @@ public class EmployerServiceImpl implements EmployerService {
             return "旧密码输入错误";
         }
     }
+    @Override
+    public void delete(Long id) {
+        Employer employer=new Employer();
+        employer.setId(id);
+        employerMapper.delete(employer);
+    }
 }
 
 

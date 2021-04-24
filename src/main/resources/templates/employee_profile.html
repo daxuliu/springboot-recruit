@@ -211,7 +211,7 @@
                 <!-- Boxed List -->
                 <div class="boxed-list margin-bottom-60">
                     <div class="boxed-list-headline">
-                        <h3><i class="icon-material-outline-thumb-up"></i>历史完成任务</h3>
+                        <h3><i class="icon-material-outline-thumb-up"></i>历史投递</h3>
                     </div>
                     <ul class="boxed-list-ul">
                         <li th:each="task : ${tasks}">
@@ -220,7 +220,7 @@
                                 <div class="item-content">
                                     <h4><a target="_blank" th:href="@{'/task/page?taskId=' + ${task.id}}">[[${task.taskTitle}]]</a><span>[[${task.taskProfile}]]</span></h4>
                                     <div class="item-details margin-top-10">
-                                        <div class="detail-item">完成时间：<i class="icon-material-outline-date-range"></i>[[${#dates.format(task.closeTime, 'yyyy-MM-dd HH:mm:ss')}]]</div>
+                                        <div class="detail-item">投递时间：<i class="icon-material-outline-date-range"></i>[[${#dates.format(task.closeTime, 'yyyy-MM-dd HH:mm:ss')}]]</div>
                                     </div>
                                 </div>
                             </div>
@@ -239,7 +239,7 @@
 
                     <!-- Profile Overview -->
                     <div class="profile-overview">
-                        <div class="overview-item"><strong>[[${completeCount}]]</strong><span>总完成任务</span></div>
+                        <div class="overview-item"><strong>[[${completeCount}]]</strong><span>总投递</span></div>
                         <div class="overview-item"><strong>[[${bowerCount}]]</strong><span>主页总访问次数</span></div>
                     </div>
 

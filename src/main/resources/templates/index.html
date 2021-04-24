@@ -62,7 +62,7 @@
                                     <div class="user-details">
                                         <div class="user-avatar status-online"><img th:src="${session.employee.headImg}" alt=""></div>
                                         <div class="user-name">
-                                            [[${session.employee.username}]] <span>自由职业者</span>
+                                            [[${session.employee.username}]] <span>求职者</span>
                                         </div>
                                     </div>
 
@@ -200,13 +200,13 @@
 
                         <!-- Search Field -->
                         <div class="intro-search-field">
-                            <label for ="key" class="field-title ripple-effect">您想要做什么?</label>
-                            <input id="key"  type="text" placeholder="例如：Java Web 网站">
+                            <label for ="key" class="field-title ripple-effect">您想要什么机会?</label>
+                            <input id="key"  type="text" placeholder="例如：Java Web 网站开发">
                         </div>
 
                         <!-- Search Field -->
                         <div class="intro-search-field">
-                            <select class="selectpicker default" id="category" data-selected-text-format="count" title="所有任务分类" >
+                            <select class="selectpicker default" id="category" data-selected-text-format="count" title="所有职位分类" >
                                 <option th:value="${taskCategory.id}" th:each="taskCategory : ${taskCategories}">[[${taskCategory.categoryName}]]</option>
                             </select>
                         </div>
@@ -283,8 +283,8 @@
 
                     <!-- Section Headline -->
                     <div class="section-headline margin-top-0 margin-bottom-35">
-                        <h3>近期任务</h3>
-                        <a href="/task/list" class="headline-link">浏览所有任务</a>
+                        <h3>近期职位</h3>
+                        <a href="/task/list" class="headline-link">浏览所有职位</a>
                     </div>
 
                     <!-- Jobs Container -->
@@ -365,7 +365,7 @@
                                 <div class="icon-box-check"><i class="icon-material-outline-check"></i></div>
                             </div>
                         </div>
-                        <h3>选择（发布任务）</h3>
+                        <h3>选择/发布职位</h3>
                     </div>
                 </div>
 
@@ -379,7 +379,7 @@
                                 <div class="icon-box-check"><i class="icon-material-outline-check"></i></div>
                             </div>
                         </div>
-                        <h3>完成任务（选择自由职业者）</h3>
+                        <h3>投递/职位</h3>
                     </div>
                 </div>
 

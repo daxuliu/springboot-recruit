@@ -195,6 +195,13 @@ public class EmployeeServiceImpl implements EmployeeService {
         employee.setBrowseCount(bowerCount);
         employeeMapper.updateByPrimaryKey(employee);
     }
+
+    @Override
+    public void delete(Long id) {
+        Employee employee=new Employee();
+        employee.setId(id);
+        employeeMapper.delete(employee);
+    }
 }
 
 

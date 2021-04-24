@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -37,6 +38,13 @@ public class AdminEmployeeController {
 
         // 设置到域对象中，提供给页面展示
         model.addAttribute("employees", employees);
+        return "admin/employee";
+    }
+    @GetMapping("/delete")
+    public String detele(@RequestParam("id") String id) {
+        // 查询所有分类
+        Long Id=Long.getLong(id);
+        employeeService.delete(Id);
         return "admin/employee";
     }
 }

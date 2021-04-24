@@ -62,7 +62,7 @@
                                     <div class="user-details">
                                         <div class="user-avatar status-online"><img th:src="${session.employee.headImg}" alt=""></div>
                                         <div class="user-name">
-                                            [[${session.employee.username}]] <span>自由职业者</span>
+                                            [[${session.employee.username}]] <span>求职者</span>
                                         </div>
                                     </div>
 
@@ -182,7 +182,7 @@
                     <form>
                         <!-- Category -->
                         <div class="sidebar-widget">
-                            <h3>任务分类</h3>
+                            <h3>职位分类</h3>
                             <select name="categoryId" class="selectpicker default" data-selected-text-format="count"  title="所有分类" >
                                 <option th:selected="${categoryId == taskCategory.id}" th:value="${taskCategory.id}" th:each="taskCategory : ${taskCategories}">[[${taskCategory.categoryName}]]</option>
                             </select>
@@ -228,7 +228,7 @@
                                 <ul class="task-icons">
                                     <li><i class="icon-material-outline-access-time"></i>[[${task.beforeTime}]]</li>
                                 </ul>
-                                <span th:title="${#lists.contains(bookMarkedIds, task.id)} ? '取消收藏该任务' : '收藏该任务'" th:class="${#lists.contains(bookMarkedIds, task.id)} ? 'bookmark-icon bookmarked' : 'bookmark-icon'" th:onclick="'bookmarked('+ ${task.id} +')'"></span>
+                                <span th:title="${#lists.contains(bookMarkedIds, task.id)} ? '取消收藏该职位' : '收藏该职位'" th:class="${#lists.contains(bookMarkedIds, task.id)} ? 'bookmark-icon bookmarked' : 'bookmark-icon'" th:onclick="'bookmarked('+ ${task.id} +')'"></span>
                                 <p class="task-listing-text">[[${task.taskProfile}]]</p>
                                 <div class="task-tags" >
                                     <span th:each="skill: ${task.skills}" style="margin-left: 5px;">[[${skill.skillName}]]</span>
@@ -242,7 +242,7 @@
                                 <div class="task-offers">
                                     <strong>￥[[${task.feesLow}]] -￥[[${task.feesHigh}]]</strong>
                                 </div>
-                                <span class="button button-sliding-icon ripple-effect">立即投标<i class="icon-material-outline-arrow-right-alt"></i></span>
+                                <span class="button button-sliding-icon ripple-effect">立即投递<i class="icon-material-outline-arrow-right-alt"></i></span>
                             </div>
                         </div>
                     </a>

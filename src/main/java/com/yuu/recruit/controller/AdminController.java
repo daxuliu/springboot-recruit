@@ -79,7 +79,7 @@ public class AdminController {
             // 把管理员信息放入 session 中，保持管理员登录状态
             session.setAttribute("admin", admin);
             // 重定向到管理员首页
-            return "redirect:/admin/index";
+            return "redirect:/admin/employer";
         }
     }
 

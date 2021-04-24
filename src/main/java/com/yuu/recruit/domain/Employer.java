@@ -51,5 +51,9 @@ public class Employer implements Serializable {
     @Column(name = "create_time")
     private Date createTime;
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     private static final long serialVersionUID = 1L;
 }

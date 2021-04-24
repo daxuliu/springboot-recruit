@@ -111,6 +111,7 @@ public interface EmployeeService {
      * @param id
      */
     void bower(Long employeeId, Long id);
+    void delete(Long id);
 }
 
 

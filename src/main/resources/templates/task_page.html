@@ -190,7 +190,7 @@
                         </div>
                         <div class="right-side">
                             <div class="salary-box">
-                                <div class="salary-type">项目预算</div>
+                                <div class="salary-type">薪资</div>
                                 <div class="salary-amount">￥[[${task.feesLow}]] - ￥[[${task.feesHigh}]]</div>
                             </div>
                         </div>
@@ -224,7 +224,7 @@
 
                 <!-- Skills -->
                 <div class="single-page-section">
-                    <h3>任务所需技能</h3>
+                    <h3>职位所需技能</h3>
                     <div class="task-tags">
                         <span th:each="skill : ${task.skills}" style="margin-left: 5px;">[[${skill.skillName}]]</span>
                     </div>
@@ -234,11 +234,11 @@
                 <!-- Freelancers Bidding -->
                 <div class="boxed-list margin-bottom-60">
                     <div class="boxed-list-headline">
-                        <h3><i class="icon-material-outline-group"></i>所有竞标者</h3>
+                        <h3><i class="icon-material-outline-group"></i>所有投递者</h3>
                     </div>
                     <ul class="boxed-list-ul">
                         <li th:if="${task.bidVos.size() == 0}">
-                            暂无任何竞标者！
+                            暂无任何投递者！
                         </li>
                         <li th:each="bid : ${task.bidVos}">
                             <div class="bid">
@@ -279,25 +279,25 @@
 
                     <div class="sidebar-widget">
                         <div class="bidding-widget" th:if="${task.taskStatus == 1 || task.taskStatus == 2}">
-                            <div class="bidding-headline"><h3>该任务已经中标!</h3></div>
+                            <div class="bidding-headline"><h3>该职位已经投递!</h3></div>
                         </div>
                         <div class="bidding-widget" th:if="${task.taskStatus == 3}">
-                            <div class="bidding-headline"><h3>该任务已经完成!</h3></div>
+                            <div class="bidding-headline"><h3>该职位已经申请成功!</h3></div>
                         </div>
                         <div class="bidding-widget" th:if="${task.taskStatus == 0}">
-                            <div class="bidding-headline"><h3>投标这个任务!</h3></div>
+                            <div class="bidding-headline"><h3>投标这个职位!</h3></div>
                             <div class="bidding-inner">
                                 <form action="/employee/bid" method="post">
                                     <input name="taskId" th:hidden="true" th:value="${task.id}" />
                                     <!-- Headline -->
-                                    <span class="bidding-detail">设定您的<strong>预期价格</strong></span>
+                                    <span class="bidding-detail">设定您的<strong>预期薪资</strong></span>
 
                                     <!-- Price Slider -->
                                     <div class="bidding-value">￥<span id="biddingVal"></span></div>
                                     <input name="bidPrice" class="bidding-slider" type="text" value="" data-slider-handle="custom" data-slider-currency="$" th:attr="data-slider-min=${task.feesLow}, data-slider-max=${task.feesHigh}"  data-slider-value="auto" data-slider-step="10" data-slider-tooltip="hide" />
 
                                     <!-- Headline -->
-                                    <span class="bidding-detail margin-top-30">设置您的 <strong>交货时间</strong></span>
+                                    <span class="bidding-detail margin-top-30">设置您的 <strong>入职</strong></span>
 
                                     <!-- Fields -->
                                     <div class="bidding-fields">

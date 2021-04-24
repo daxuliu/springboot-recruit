@@ -14,4 +14,5 @@ public interface AdminService{
      * @return
      */
     Admin login(Admin admin);
+
 }

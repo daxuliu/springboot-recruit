@@ -243,6 +243,9 @@
                                 <td>
                                     [[${#dates.format(employer.createTime, 'yyyy-MM-dd HH:mm:ss')}]]
                                 </td>
+                                <td>
+                                    <a th:href="'/admin/employer/delete?id='+${employer.id}">删除</a>
+                                </td>
                             </tr>
                             </tbody>
                         </table>

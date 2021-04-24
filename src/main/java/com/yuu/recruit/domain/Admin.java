@@ -5,7 +5,7 @@ import javax.persistence.*;
 import lombok.Data;
 
 @Data
-@Table(name = "`admin`")
+@Table(name = "admin")
 public class Admin implements Serializable {
     /**
      * 管理员ID
@@ -23,7 +23,7 @@ public class Admin implements Serializable {
     /**
      * 密码
      */
-    @Column(name = "`password`")
+    @Column(name = "password")
     private String password;
 
     private static final long serialVersionUID = 1L;

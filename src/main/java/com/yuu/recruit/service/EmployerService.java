@@ -80,6 +80,7 @@ public interface EmployerService {
      * @return
      */
     String updatePass(Long id, String password, String newPassword);
+    void delete(Long id);
 }
 
 
